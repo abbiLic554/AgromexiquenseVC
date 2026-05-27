@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5FDF6"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ENCABEZADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="130dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/verde"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Panel Administrativo"
+                android:textColor="#A5D6A7"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Panel de Comité"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- CONTENIDO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- TARJETA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="20dp"
+                android:elevation="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona una opción para administrar el sistema."
+                    android:textColor="#555555"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp"/>
+
+                <!-- BOTÓN COMITÉ -->
+                <Button
+                    android:id="@+id/btnGestionComite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="55dp"
+                    android:text="Usuarios Comité"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:backgroundTint="@color/celeste"/>
+
+                <!-- BOTÓN PRODUCTORES -->
+                <Button
+                    android:id="@+id/btnGestionProductores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="55dp"
+                    android:text="Productores"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:backgroundTint="@color/verde2"
+                    android:layout_marginTop="16dp"/>
+
+                <!-- BOTÓN INFORMACIÓN -->
+                <Button
+                    android:id="@+id/btnGestionContenido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="55dp"
+                    android:text="Información App"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:backgroundTint="@color/azul"
+                    android:layout_marginTop="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

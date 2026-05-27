@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".AgroApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Agromexiquense">
+
+        <!-- MAIN -->
+        <activity
+            android:name=".activities.cliente.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- CLIENTE -->
+        <activity android:name=".activities.cliente.DetalleProductoActivity"/>
+        <activity android:name=".activities.cliente.ProductoresActivity"/>
+        <activity android:name=".activities.cliente.UbicacionActivity"/>
+        <activity android:name=".activities.cliente.EventosActivity"/>
+        <activity android:name=".activities.cliente.InfoAgroActivity"/>
+        <activity android:name=".activities.cliente.DetalleProductorActivity"/>
+
+        <!-- ADMIN -->
+        <activity android:name=".activities.admin.LoginActivity"/>
+        <activity android:name=".activities.admin.MainActivityAdmin"/>
+        <activity android:name=".activities.admin.PerfilProductorActivity"/>
+
+    </application>
+
+</manifest>

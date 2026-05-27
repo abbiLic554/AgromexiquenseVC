@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5FDF6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ENCABEZADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/verde">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gestión de Productos"
+                android:textColor="#A5D6A7"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar Nuevo Producto"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- CONTENIDO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- TARJETA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="24dp"
+                android:elevation="5dp">
+
+                <!-- IMAGEN -->
+                <ImageView
+                    android:id="@+id/imgProducto"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"
+                    android:background="#E0E0E0"/>
+
+                <!-- BOTÓN IMAGEN -->
+                <Button
+                    android:id="@+id/btnSeleccionarImagen"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Seleccionar Imagen"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/celeste"
+                    android:layout_marginTop="18dp"/>
+
+                <!-- NOMBRE PRODUCTO -->
+                <EditText
+                    android:id="@+id/etNombreProducto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre del producto"
+                    android:padding="14dp"
+                    android:textSize="16sp"
+                    android:backgroundTint="#66BB6A"
+                    android:layout_marginTop="18dp"/>
+
+                <!-- DESCRIPCIÓN -->
+                <EditText
+                    android:id="@+id/etDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Descripción"
+                    android:padding="14dp"
+                    android:textSize="16sp"
+                    android:backgroundTint="#66BB6A"
+                    android:layout_marginTop="14dp"/>
+
+                <!-- SPINNER -->
+                <Spinner
+                    android:id="@+id/spTipoProducto"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="18dp"
+                    android:backgroundTint="#66BB6A"/>
+
+                <!-- BOTÓN GUARDAR -->
+                <Button
+                    android:id="@+id/btnGuardarProducto"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Guardar Producto"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/verde2"
+                    android:layout_marginTop="24dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

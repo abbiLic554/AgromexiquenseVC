@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5FDF6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ENCABEZADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/verde">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información Cultural"
+                android:textColor="#A5D6A7"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historia del Mercado"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- CONTENIDO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- TARJETA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="24dp"
+                android:elevation="5dp">
+
+                <!-- BLOQUE 1 -->
+                <Button
+                    android:id="@+id/btnImagen1"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Seleccionar Imagen 1"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/celeste"/>
+
+                <ImageView
+                    android:id="@+id/imgHistoria1"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="14dp"
+                    android:background="#E0E0E0"
+                    android:scaleType="centerCrop"/>
+
+                <EditText
+                    android:id="@+id/etDescripcion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Descripción 1"
+                    android:padding="14dp"
+                    android:textSize="16sp"
+                    android:backgroundTint="#66BB6A"
+                    android:layout_marginTop="14dp"/>
+
+                <!-- BLOQUE 2 -->
+                <Button
+                    android:id="@+id/btnImagen2"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Seleccionar Imagen 2"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/verde2"
+                    android:layout_marginTop="26dp"/>
+
+                <ImageView
+                    android:id="@+id/imgHistoria2"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="14dp"
+                    android:background="#E0E0E0"
+                    android:scaleType="centerCrop"/>
+
+                <EditText
+                    android:id="@+id/etDescripcion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Descripción 2"
+                    android:padding="14dp"
+                    android:textSize="16sp"
+                    android:backgroundTint="#66BB6A"
+                    android:layout_marginTop="14dp"/>
+
+                <!-- BOTÓN GUARDAR -->
+                <Button
+                    android:id="@+id/btnGuardarHistoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Guardar Historia"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/azul"
+                    android:layout_marginTop="28dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

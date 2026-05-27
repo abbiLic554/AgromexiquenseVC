@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menuFiltro"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:padding="20dp"
+    android:layout_marginTop="150dp">
+
+    <!-- TITULO -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filtrar por"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginBottom="25dp"/>
+
+    <!-- FRUTAS -->
+    <LinearLayout
+        android:id="@+id/btnFrutas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/borde_blanco_sombra"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:tint="#FF9800"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frutas"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+    <!-- VERDURAS -->
+    <LinearLayout
+        android:id="@+id/btnVerduras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/borde_blanco_sombra"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:tint="#4CAF50"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verduras"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+    <!-- ARTESANIAS -->
+    <LinearLayout
+        android:id="@+id/btnArtesanias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/borde_blanco_sombra"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:tint="#9C27B0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artesanías"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+    <!-- PIEL -->
+    <LinearLayout
+        android:id="@+id/btnPiel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/borde_blanco_sombra"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:tint="#795548"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Piel"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+    <!-- OTROS -->
+    <LinearLayout
+        android:id="@+id/btnOtros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/borde_blanco_sombra"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:tint="#607D8B"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Otros"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+    <!-- BOTON -->
+    <Button
+        android:id="@+id/btnQuitarFiltros"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Quitar filtros"/>
+
+</LinearLayout>

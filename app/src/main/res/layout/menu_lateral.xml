@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuContainer"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="MENÚ"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#009688"/>
+
+    <!-- INICIO -->
+    <LinearLayout
+        android:id="@+id/btnInicio"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_view"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicio"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <!-- PRODUCTORES -->
+    <LinearLayout
+        android:id="@+id/btnProductores"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_agenda"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Productores"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <!-- UBICACIÓN -->
+    <LinearLayout
+        android:id="@+id/btnUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_mylocation"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <!-- EVENTOS -->
+    <LinearLayout
+        android:id="@+id/btnEventos"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_today"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eventos"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <!-- MAS INFO -->
+    <LinearLayout
+        android:id="@+id/btnInfo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_info_details"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Más sobre Agro"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <!-- COMITÉ -->
+    <LinearLayout
+        android:id="@+id/btnComite"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_manage"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soy Comité"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5FDF6">
+
+    <!-- ENCABEZADO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/verde">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panel Administrativo"
+            android:textColor="#A5D6A7"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestión de Administradores"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <!-- CONTENIDO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- BOTÓN -->
+        <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Agregar Administrador"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:backgroundTint="@color/celeste"/>
+
+        <!-- LISTA -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAdmins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="18dp"
+            android:clipToPadding="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

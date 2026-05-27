@@ -1,0 +1,50 @@
+[versions]
+agp = "9.1.1"
+coreKtx = "1.18.0"
+appcompat = "1.7.1"
+material = "1.14.0"
+activity = "1.13.0"
+constraintlayout = "2.2.1"
+
+firebaseBom = "33.5.1"
+glide = "4.16.0"
+
+recyclerview = "1.3.2"
+drawerlayout = "1.2.0"
+
+junit = "4.13.2"
+junitExt = "1.3.0"
+espresso = "3.7.0"
+
+
+[libraries]
+
+# Android base
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# UI components
+recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+drawerlayout = { module = "androidx.drawerlayout:drawerlayout", version.ref = "drawerlayout" }
+
+# Firebase
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore-ktx" }
+firebase-auth = { module = "com.google.firebase:firebase-auth-ktx" }
+
+# Glide
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitExt" }
+
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="verde">#2E7D32</color>
+    <color name="celeste">#17C6C3</color>
+    <color name="azul">#1565C0</color>
+    <color name="gris">#9E9E9E</color>
+    <color name="verde2">#43A047</color>
+    <color name="verde3">#E8F5E9</color>
+    <color name="rojo">#E53935</color>
+
+    <color name="fondonoticias">#4CAF50</color>
+    <color name="purple_header">#6A1B9A</color>
+    <color name="lilac_button">#E8D6FB</color>
+    <color name="soft_green">#EFF7EA</color>
+    <color name="cyan_button">#5CC7D6</color>
+    <color name="rating_yellow">#E8DA3D</color>
+    <color name="card_stroke">#D5D9D8</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#6B6B6B</color>
+
+</resources>

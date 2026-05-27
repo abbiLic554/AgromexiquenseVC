@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:layout_marginBottom="14dp"
+    android:background="#FFFFFF"
+    android:elevation="4dp">
+
+    <!-- IMAGEN -->
+    <ImageView
+        android:id="@+id/imgProductoItem"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        android:background="#E0E0E0"/>
+
+    <!-- NOMBRE -->
+    <TextView
+        android:id="@+id/txtNombreProductoItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textColor="#2E7D32"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="12dp"/>
+
+    <!-- DESCRIPCIÓN -->
+    <TextView
+        android:id="@+id/txtDescripcionProductoItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripción"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        android:layout_marginTop="6dp"/>
+
+    <!-- LÍNEA -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"/>
+
+    <!-- BOTONES -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- EDITAR -->
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Editar"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:backgroundTint="@color/celeste"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- ELIMINAR -->
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Eliminar"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:backgroundTint="@color/rojo"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

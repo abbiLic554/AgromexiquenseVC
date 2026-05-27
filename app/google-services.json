@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "607205908553",
+    "project_id": "agromexbd",
+    "storage_bucket": "agromexbd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607205908553:android:75627e6bc15b7e9b149f98",
+        "android_client_info": {
+          "package_name": "com.example.agromexiquenseapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWVlziHe-XHQFalKtFWGhoLpKJDree1M8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607205908553:android:ce3131fda8681c79149f98",
+        "android_client_info": {
+          "package_name": "teknoeducativa.mx.agromexiquensevc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWVlziHe-XHQFalKtFWGhoLpKJDree1M8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607205908553:android:70d8ad6b37607016149f98",
+        "android_client_info": {
+          "package_name": "teknoeducativa.mx.agrovc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWVlziHe-XHQFalKtFWGhoLpKJDree1M8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

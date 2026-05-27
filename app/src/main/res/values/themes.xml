@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AgroVc" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.AgroVc" parent="Base.Theme.AgroVc" />
+    <style name="Theme.Agromexiquense"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Color verde de la barra -->
+        <item name="colorPrimary">#4CAF50</item>
+
+        <!-- Color de iconos y texto -->
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- Color de barra superior -->
+        <item name="android:statusBarColor">#7A8F63</item>
+
+    </style>
+</resources>

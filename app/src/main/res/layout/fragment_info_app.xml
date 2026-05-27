@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5FDF6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ENCABEZADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@color/verde"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Panel Informativo"
+                android:textColor="#A5D6A7"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información de la App"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- CONTENIDO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- TARJETA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="24dp"
+                android:elevation="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona una sección para visualizar la información disponible de la aplicación."
+                    android:textColor="#555555"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="25dp"/>
+
+                <!-- BOTÓN INICIO -->
+                <Button
+                    android:id="@+id/btnInicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Inicio"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:backgroundTint="@color/celeste"
+                    android:layout_marginBottom="15dp"/>
+
+                <!-- BOTÓN HISTORIA -->
+                <Button
+                    android:id="@+id/btnHistoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Historia"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:backgroundTint="@color/verde2"
+                    android:layout_marginBottom="15dp"/>
+
+                <!-- BOTÓN EVENTOS -->
+                <Button
+                    android:id="@+id/btnEventos"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Eventos"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:backgroundTint="@color/azul"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
