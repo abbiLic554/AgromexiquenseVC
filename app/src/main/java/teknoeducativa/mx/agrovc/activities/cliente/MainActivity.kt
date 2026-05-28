@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.btnVerduras)
 
         btnArtesanias =
-            findViewById(R.id.btnArtesanias)
+            findViewById(R.id.btnArtesanal)
 
         btnPiel =
             findViewById(R.id.btnPiel)

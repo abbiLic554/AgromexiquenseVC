@@ -37,7 +37,7 @@ class EventoAdapter(
         val item = lista[position]
 
         holder.nombre.text = item.nombre
-        holder.fecha.text = item.fecha.toString() // 🔥 FIX CLAVE
+        holder.fecha.text = item.fecha.toString()
         holder.ubicacion.text = item.ubicacion
         holder.descripcion.text = item.descripcion
 

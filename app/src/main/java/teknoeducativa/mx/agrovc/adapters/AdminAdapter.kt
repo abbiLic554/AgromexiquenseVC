@@ -14,7 +14,6 @@ class AdminAdapter(
 
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 
-        // ⚠️ ESTOS IDS DEBEN EXISTIR EN item_productor_admin.xml
         val nombre = v.findViewById<TextView>(R.id.txtNombre)
         val telefono = v.findViewById<TextView>(R.id.txtTelefono)
         val ubicacion = v.findViewById<TextView>(R.id.txtUbicacion)
@@ -36,8 +35,8 @@ class AdminAdapter(
         val item = lista[position]
 
         h.nombre.text = item.nombre
-        h.telefono.text = item.usuario   // ajusta si quieres
-        h.ubicacion.text = item.usuario  // ajusta según modelo
+        h.telefono.text = item.usuario
+        h.ubicacion.text = item.usuario
 
         h.btnEditar.setOnClickListener { onEditar(item) }
         h.btnEliminar.setOnClickListener { onEliminar(item) }

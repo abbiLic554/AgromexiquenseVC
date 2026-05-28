@@ -48,12 +48,11 @@ class ProductorAdapter(
                 .into(holder.img)
         }
 
-        // 👇 CLICK EN BOTÓN "IR"
+        // CLICK EN BOTÓN "IR"
         holder.btnIr.setOnClickListener {
             onClick(item)
         }
 
-        // opcional: click en toda la card
         holder.itemView.setOnClickListener {
             onClick(item)
         }

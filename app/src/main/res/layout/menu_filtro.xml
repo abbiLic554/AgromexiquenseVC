@@ -79,7 +79,7 @@
 
     <!-- ARTESANIAS -->
     <LinearLayout
-        android:id="@+id/btnArtesanias"
+        android:id="@+id/btnArtesanal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

@@ -42,7 +42,7 @@ class DetalleProductoActivity : AppCompatActivity() {
 
         Glide.with(this).load(imagen).into(img)
 
-        // 🔥 PRODUCTOR
+        // PRODUCTOR
         if (idProductor.isNotEmpty()) {
 
             db.collection("PRODUCTORES")
@@ -61,7 +61,7 @@ class DetalleProductoActivity : AppCompatActivity() {
                         .load(imagenProd)
                         .into(imgProd)
 
-                    // 🔥 BOTÓN IR PRODUCTOR
+                    // BOTÓN IR PRODUCTOR
                     btnProd.setOnClickListener {
                         val i = Intent(this, DetalleProductorActivity::class.java)
                         i.putExtra("id", idProductor)

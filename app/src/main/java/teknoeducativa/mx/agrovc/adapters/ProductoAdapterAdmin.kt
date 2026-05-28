@@ -160,13 +160,11 @@ class ProductoAdapterAdmin(
             // TIPOS
 
             val tipos = arrayOf(
-
-                "Artesanal",
-                "Piel",
                 "Frutas",
                 "Verduras",
-                "Cerámica",
-                "Conservas"
+                "Artesanías",
+                "Piel",
+                "Otros"
             )
 
             spinner.adapter = ArrayAdapter(

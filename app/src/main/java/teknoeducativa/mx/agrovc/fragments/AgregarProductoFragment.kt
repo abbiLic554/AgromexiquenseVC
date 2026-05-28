@@ -1,19 +1,28 @@
 package teknoeducativa.mx.agrovc.fragments
 
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
 import teknoeducativa.mx.agrovc.R
 
 class AgregarProductoFragment : Fragment() {
 
     private val db = FirebaseFirestore.getInstance()
+    private val storage = FirebaseStorage.getInstance().reference
 
     private var idProductor: String? = null
+    private var imageUri: Uri? = null
+
+    private lateinit var imgProducto: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,16 +30,11 @@ class AgregarProductoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val view = inflater.inflate(
-            R.layout.dialog_producto,
-            container,
-            false
-        )
+        val view = inflater.inflate(R.layout.dialog_producto, container, false)
 
-        // RECIBIR ID
         idProductor = arguments?.getString("ID_PRODUCTOR")
 
-        val imgProducto = view.findViewById<ImageView>(R.id.imgProducto)
+        imgProducto = view.findViewById(R.id.imgProducto)
         val btnImagen = view.findViewById<Button>(R.id.btnSeleccionarImagen)
 
         val etNombre = view.findViewById<EditText>(R.id.etNombreProducto)
@@ -39,69 +43,85 @@ class AgregarProductoFragment : Fragment() {
         val spinner = view.findViewById<Spinner>(R.id.spTipoProducto)
         val btnGuardar = view.findViewById<Button>(R.id.btnGuardarProducto)
 
-        // SPINNER SIMPLE
-        val tipos = arrayOf("Fruta", "Verdura", "Grano", "Otro")
+        // TIPOS (CORREGIDOS A TU SISTEMA)
+        val tipos = arrayOf(
+            "Frutas",
+            "Verduras",
+            "Artesanías",
+            "Piel",
+            "Otros"
+        )
+
         spinner.adapter = ArrayAdapter(
             requireContext(),
             android.R.layout.simple_spinner_dropdown_item,
             tipos
         )
 
-        // BOTÓN IMAGEN (solo placeholder por ahora)
-        btnImagen.setOnClickListener {
-            Toast.makeText(
-                requireContext(),
-                "Aquí abrirías galería o cámara",
-                Toast.LENGTH_SHORT
-            ).show()
+        // ABRIR GALERÍA
+        val pickImage = registerForActivityResult(
+            ActivityResultContracts.GetContent()
+        ) { uri: Uri? ->
+            if (uri != null) {
+                imageUri = uri
+                imgProducto.setImageURI(uri)
+            }
         }
 
-        // GUARDAR PRODUCTO
+        btnImagen.setOnClickListener {
+            pickImage.launch("image/*")
+        }
+
+        // GUARDAR
         btnGuardar.setOnClickListener {
 
             val nombre = etNombre.text.toString()
             val descripcion = etDescripcion.text.toString()
             val tipo = spinner.selectedItem.toString()
 
-            if (nombre.isEmpty() || descripcion.isEmpty()) {
-                Toast.makeText(
-                    requireContext(),
-                    "Completa todos los campos",
-                    Toast.LENGTH_SHORT
-                ).show()
+            if (nombre.isEmpty() || descripcion.isEmpty() || imageUri == null) {
+                Toast.makeText(requireContext(), "Completa todo", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            val producto = hashMapOf(
-                "nombre" to nombre,
-                "descripcion" to descripcion,
-                "tipo" to tipo,
-                "imagen" to "",
-                "id_productor" to idProductor
-            )
-
-            db.collection("PRODUCTOS")
-                .add(producto)
-                .addOnSuccessListener {
-
-                    Toast.makeText(
-                        requireContext(),
-                        "Producto guardado",
-                        Toast.LENGTH_SHORT
-                    ).show()
-
-                    parentFragmentManager.popBackStack()
-                }
-                .addOnFailureListener {
-
-                    Toast.makeText(
-                        requireContext(),
-                        "Error al guardar",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
+            subirImagenYGuardar(nombre, descripcion, tipo)
         }
 
         return view
+    }
+
+    private fun subirImagenYGuardar(
+        nombre: String,
+        descripcion: String,
+        tipo: String
+    ) {
+
+        val ref = storage.child("productos/${System.currentTimeMillis()}.jpg")
+
+        ref.putFile(imageUri!!)
+            .addOnSuccessListener {
+
+                ref.downloadUrl.addOnSuccessListener { url ->
+
+                    val producto = hashMapOf(
+                        "nombre" to nombre,
+                        "descripcion" to descripcion,
+                        "tipo" to tipo,
+                        "imagen" to url.toString(),
+                        "id_productor" to idProductor
+                    )
+
+                    db.collection("PRODUCTOS")
+                        .add(producto)
+                        .addOnSuccessListener {
+
+                            Toast.makeText(requireContext(), "Guardado", Toast.LENGTH_SHORT).show()
+                            parentFragmentManager.popBackStack()
+                        }
+                }
+            }
+            .addOnFailureListener {
+                Toast.makeText(requireContext(), "Error al subir imagen", Toast.LENGTH_SHORT).show()
+            }
     }
 }
