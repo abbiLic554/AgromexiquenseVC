@@ -163,7 +163,7 @@
                         android:backgroundTint="#43A047"
                         android:text="Guardar"
                         android:textColor="#FFFFFF"
-                        android:textSize="14sp"
+                        android:textSize="13dp"
                         android:textStyle="bold" />
 
                     <!-- CANCELAR -->
@@ -176,7 +176,7 @@
                         android:backgroundTint="#9E9E9E"
                         android:text="Cancelar"
                         android:textColor="#FFFFFF"
-                        android:textSize="14sp"
+                        android:textSize="13dp"
                         android:textStyle="bold" />
 
                 </LinearLayout>

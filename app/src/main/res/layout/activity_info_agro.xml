@@ -15,8 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="0dp">
+            android:orientation="vertical">
 
             <!-- HEADER -->
             <LinearLayout
@@ -24,14 +23,12 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:background="@drawable/fondo2"
-                android:padding="0dp">
+                android:background="@drawable/fondo2">
 
                 <ImageView
                     android:id="@+id/imgPerfil"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    android:layout_gravity="bottom|start"
                     android:layout_marginStart="1dp"
                     android:layout_marginBottom="10dp"
                     android:scaleType="centerCrop"
@@ -59,122 +56,110 @@
                     android:id="@+id/btnMenu"
                     android:layout_width="34dp"
                     android:layout_height="34dp"
+                    android:layout_marginEnd="10dp"
                     android:src="@android:drawable/ic_menu_sort_by_size" />
 
             </LinearLayout>
 
-            <!-- SECCIÓN QUÉ ES -->
+            <!-- IMAGEN 1 -->
+            <ImageView
+                android:id="@+id/imgQueEs"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+            <!-- TEXTO 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="#DDE8D6"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <ImageView
-                    android:id="@+id/imgQueEs"
-                    android:layout_width="110dp"
-                    android:layout_height="90dp"
-                    android:scaleType="centerCrop"
-                    android:src="@android:drawable/ic_menu_gallery" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:paddingStart="8dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/que"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/black"/>
-
-                    <TextView
-                        android:id="@+id/txtQueEs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/carg"
-                        android:textColor="@android:color/black"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:layout_marginTop="12dp"
-                android:background="#B7D321"/>
-
-            <!-- BENEFICIOS -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="#DDE8D6"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/bene"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/black"/>
-
-                    <TextView
-                        android:id="@+id/txtBeneficios"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/carg"
-                        android:textColor="@android:color/black"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-
-                <ImageView
-                    android:id="@+id/imgBeneficios"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:scaleType="centerCrop"
-                    android:src="@android:drawable/ic_menu_gallery"/>
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:layout_marginTop="12dp"
-                android:background="#B7D321"/>
-
-            <!-- REDES -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_margin="10dp"
                 android:background="#DDE8D6"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/que"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtQueEs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/carg"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#B7D321" />
+
+            <!-- IMAGEN 2 -->
+            <ImageView
+                android:id="@+id/imgBeneficios"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+            <!-- TEXTO 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#DDE8D6"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bene"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtBeneficios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/carg"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#B7D321" />
+
+            <!-- REDES SOCIALES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#DDE8D6"
+                android:orientation="vertical"
+                android:padding="12dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/red"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:textColor="@android:color/black"/>
 
                 <TextView
@@ -183,7 +168,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/inst"
                     android:textColor="#1B5E20"
-                    android:padding="8dp"/>
+                    android:paddingTop="10dp"
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:id="@+id/txtFacebook"
@@ -191,7 +177,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/face"
                     android:textColor="#1B5E20"
-                    android:padding="8dp"/>
+                    android:paddingTop="10dp"
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:id="@+id/txtWhatsapp"
@@ -199,13 +186,15 @@
                     android:layout_height="wrap_content"
                     android:text="@string/what"
                     android:textColor="#1B5E20"
-                    android:padding="8dp"/>
+                    android:paddingTop="10dp"
+                    android:textSize="15sp"/>
+
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- MENÚ LATERAL (TU XML) -->
+    <!-- MENÚ LATERAL -->
     <LinearLayout
         android:id="@+id/menuLateral"
         android:layout_width="280dp"

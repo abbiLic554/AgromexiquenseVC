@@ -66,42 +66,71 @@
             <ImageView
                 android:id="@+id/imgMapa"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="260dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/imgmercado" />
+                android:src="@drawable/mapaagroo1" />
 
             <!-- HORARIO -->
             <TextView
                 android:id="@+id/txtHorario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Horario: Lunes a Domingo 7:00 AM - 6:00 PM"
+                android:text="Horario:"
                 android:textStyle="bold"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:textSize="20sp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txtHorario1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sábados y domingos de 9:00 am a 18:00pm hrs."
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:textSize="16sp"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:layout_marginBottom="20dp"/>
 
             <!-- INDICACIONES -->
             <TextView
                 android:id="@+id/txtIndicaciones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cómo llegar: Desde el centro tomar avenida principal hacia el norte..."
+                android:text="Indicaciones para llegar:"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:textSize="14sp"/>
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textIndicacines1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El Mercado Agromexiquense está en el Andador Miguel Enríquez, en el centro de Villa del Carbón. Para ubicarte ve al Parque Principal con su kiosco de cantera rosa. Enfrente está la Parroquia de la Virgen de la Peña de Francia. El andador es la calle peatonal entre la iglesia y el parque. Ahí encuentras los puestos con quesos, miel, trucha y artesanías."
+                android:layout_marginStart="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginEnd="14dp"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:textStyle="normal"/>
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/im"/>
 

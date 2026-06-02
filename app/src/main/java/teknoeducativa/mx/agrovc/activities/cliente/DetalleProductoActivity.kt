@@ -13,6 +13,7 @@ class DetalleProductoActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalle_producto)
 
@@ -20,14 +21,16 @@ class DetalleProductoActivity : AppCompatActivity() {
         val title = findViewById<TextView>(R.id.tvProductTitle)
         val category = findViewById<TextView>(R.id.tvCategory)
         val shortDesc = findViewById<TextView>(R.id.tvShortDescription)
-        val longDesc = findViewById<TextView>(R.id.tvLongDescription)
-        val rating = findViewById<TextView>(R.id.tvRating)
+
+        //  SOLO TEXTO DE CALIFICACIÓN
+        val ratingText = findViewById<TextView>(R.id.ratingProducto)
 
         val imgProd = findViewById<ImageView>(R.id.imgProductor)
         val nameProd = findViewById<TextView>(R.id.txtNombreProductor)
         val descProd = findViewById<TextView>(R.id.txtDescripcionProductor)
         val btnProd = findViewById<Button>(R.id.btnIrProductor)
 
+        // DATOS RECIBIDOS
         val nombre = intent.getStringExtra("nombre") ?: ""
         val descripcion = intent.getStringExtra("descripcion") ?: ""
         val imagen = intent.getStringExtra("imagen") ?: ""
@@ -35,12 +38,18 @@ class DetalleProductoActivity : AppCompatActivity() {
         val idProductor = intent.getStringExtra("id_productor") ?: ""
         val calificacion = intent.getDoubleExtra("calificacion_promedio", 0.0)
 
+        // ASIGNAR DATOS
         title.text = nombre
         category.text = tipo
         shortDesc.text = descripcion
-        rating.text = "Calificación: $calificacion / 5"
 
-        Glide.with(this).load(imagen).into(img)
+        //  PROMEDIO (SOLO TEXTO)
+        ratingText.text =
+            "Calificación promedio: %.1f / 5".format(calificacion)
+
+        Glide.with(this)
+            .load(imagen)
+            .into(img)
 
         // PRODUCTOR
         if (idProductor.isNotEmpty()) {
@@ -61,9 +70,13 @@ class DetalleProductoActivity : AppCompatActivity() {
                         .load(imagenProd)
                         .into(imgProd)
 
-                    // BOTÓN IR PRODUCTOR
                     btnProd.setOnClickListener {
-                        val i = Intent(this, DetalleProductorActivity::class.java)
+
+                        val i = Intent(
+                            this,
+                            DetalleProductorActivity::class.java
+                        )
+
                         i.putExtra("id", idProductor)
                         startActivity(i)
                     }

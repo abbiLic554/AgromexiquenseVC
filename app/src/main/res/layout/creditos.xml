@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/fondo2"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/logoagro"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Créditos"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- MENÚ -->
+                <ImageView
+                    android:id="@+id/btnMenu"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@android:drawable/ic_menu_sort_by_size"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/abvillacecy"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"/>
+
+            <!-- TÍTULO -->
+            <TextView
+                style="@style/titleCreditos"
+                android:text="Equipo de desarrollo"
+                android:gravity="center"
+                android:padding="12dp"/>
+
+            <!-- PROGRAMADORES (CLICKABLES) -->
+
+            <TextView
+                android:id="@+id/txtAbigail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Abigail Madrigal - @abbi_lic"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1E88E5"/>
+
+            <TextView
+                android:id="@+id/txtPaulina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paulina Santos - @santos_pau"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1E88E5"/>
+
+            <TextView
+                android:id="@+id/txtBrayan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brayan Portillo - @b_r_a_y_a_n_"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1E88E5"/>
+
+            <TextView
+                android:id="@+id/txtJonatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jonatan Gonzalez - @jonatan"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1E88E5"/>
+
+            <TextView
+                android:id="@+id/txtMarcos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marcos Monroy - @monroy.marc"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1E88E5"/>
+
+            <TextView
+                android:id="@+id/txtDavid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="David Cruz - @david0_7._"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1E88E5"/>
+
+            <TextView
+                android:id="@+id/txtXimena1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ximena Ramírez - @i_ww_xiime"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1E88E5"/>
+
+            <TextView
+                android:id="@+id/txtXimena2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ximena Tapia - @ximenatapia485"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1E88E5"/>
+
+            <TextView
+                android:id="@+id/txtAldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aldo Japeth - @Aldo_portillo_"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1E88E5"/>
+
+            <TextView
+                android:id="@+id/txtFatima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fátima Domínguez - @fati_do_sa19"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1E88E5"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- MENÚ LATERAL -->
+    <LinearLayout
+        android:id="@+id/menuLateral"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF">
+
+        <include layout="@layout/menu_lateral"/>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

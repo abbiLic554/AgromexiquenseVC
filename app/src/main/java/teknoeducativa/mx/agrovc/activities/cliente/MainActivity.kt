@@ -20,39 +20,24 @@ import android.view.Menu;
 class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
-
     private lateinit var recycler: RecyclerView
-
     private lateinit var buscar: EditText
-
     private lateinit var btnMenu: ImageView
-
     private lateinit var btnFiltro: ImageView
-
     private val db = FirebaseFirestore.getInstance()
-
     private val lista = mutableListOf<Producto>()
-
     private val filtrada = mutableListOf<Producto>()
-
     private lateinit var adapter: ProductoAdapter
-
     private lateinit var txtTituloInicio: TextView
-
     private lateinit var txtHistoria: TextView
 
     // FILTROS
 
     private lateinit var btnFrutas: LinearLayout
-
     private lateinit var btnVerduras: LinearLayout
-
     private lateinit var btnArtesanias: LinearLayout
-
     private lateinit var btnPiel: LinearLayout
-
     private lateinit var btnOtros: LinearLayout
-
     private lateinit var btnQuitar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -105,6 +90,9 @@ class MainActivity : AppCompatActivity() {
         recycler.layoutManager =
             GridLayoutManager(this, 2)
 
+        recycler.setHasFixedSize(false)
+        recycler.isNestedScrollingEnabled = false
+
         adapter = ProductoAdapter(
             filtrada
         ) { producto ->
@@ -143,6 +131,11 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(
                 "calificacion_promedio",
                 producto.calificacion_promedio
+            )
+
+            intent.putExtra(
+                "id_producto",
+                producto.id_producto
             )
 
             startActivity(intent)
@@ -259,6 +252,11 @@ class MainActivity : AppCompatActivity() {
         cargarProductos()
     }
 
+    override fun onResume() {
+        super.onResume()
+        cargarProductos()
+    }
+
     private fun setupMenu() {
 
         findViewById<LinearLayout>(
@@ -327,6 +325,11 @@ class MainActivity : AppCompatActivity() {
                 )
             )
         }
+
+        findViewById<LinearLayout>(R.id.btnCreditos).setOnClickListener {
+            startActivity(Intent(this, CreditosActivity::class.java))
+            drawerLayout.closeDrawers()
+        }
     }
 
     private fun cargarInicio() {
@@ -356,11 +359,15 @@ class MainActivity : AppCompatActivity() {
 
                 for (doc in result) {
 
-                    lista.add(
+                    val producto =
                         doc.toObject(
                             Producto::class.java
                         )
-                    )
+
+                    producto.id_producto =
+                        doc.id
+
+                    lista.add(producto)
                 }
 
                 filtrada.clear()

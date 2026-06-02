@@ -83,6 +83,11 @@ class ProductoresActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.btnComite).setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
+
+        findViewById<LinearLayout>(R.id.btnCreditos).setOnClickListener {
+            startActivity(Intent(this, CreditosActivity::class.java))
+            drawerLayout.closeDrawers()
+        }
     }
 
     private fun cargarProductores() {

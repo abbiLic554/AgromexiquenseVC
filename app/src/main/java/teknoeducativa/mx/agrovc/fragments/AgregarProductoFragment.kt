@@ -108,7 +108,12 @@ class AgregarProductoFragment : Fragment() {
                         "descripcion" to descripcion,
                         "tipo" to tipo,
                         "imagen" to url.toString(),
-                        "id_productor" to idProductor
+                        "id_productor" to idProductor,
+
+                        // CALIFICACIONES
+                        "calificacion_promedio" to 0.0,
+                        "suma_calificaciones" to 0.0,
+                        "total_calificaciones" to 0
                     )
 
                     db.collection("PRODUCTOS")

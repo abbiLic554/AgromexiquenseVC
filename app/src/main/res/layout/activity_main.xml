@@ -9,9 +9,10 @@
     tools:context=".activities.cliente.MainActivity">
 
     <!-- CONTENIDO PRINCIPAL -->
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         android:background="#E8F5E9">
 
         <LinearLayout
@@ -114,7 +115,9 @@
                 android:paddingBottom="15dp"
                 android:layout_marginBottom="15dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:gravity="center"/>
 
 
             <!-- PRODUCTOS -->
@@ -133,7 +136,7 @@
             <!-- RECYCLER -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:background="@drawable/oval_busqueda"
                 android:orientation="horizontal"
                 android:padding="10dp"
@@ -149,16 +152,21 @@
                     android:id="@+id/etBuscar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Buscar productos" />
+                    android:hint="Buscar productos"
+                    android:textSize="15dp"
+                    android:layout_marginRight="26dp"/>
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerProductos"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="10dp"/>
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
+
+
 
     <!-- MENU LATERAL -->
     <include

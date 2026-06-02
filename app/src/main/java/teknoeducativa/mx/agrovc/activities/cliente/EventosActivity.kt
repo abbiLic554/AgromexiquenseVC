@@ -78,6 +78,11 @@ class EventosActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             drawerLayout.closeDrawers()
         }
+
+        findViewById<LinearLayout>(R.id.btnCreditos).setOnClickListener {
+            startActivity(Intent(this, CreditosActivity::class.java))
+            drawerLayout.closeDrawers()
+        }
     }
 
     private fun cargarEventos() {

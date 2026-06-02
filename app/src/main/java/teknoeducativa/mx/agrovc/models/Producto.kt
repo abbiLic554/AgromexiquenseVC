@@ -7,5 +7,6 @@ data class Producto(
     var imagen: String = "",
     var tipo: String = "",
     var id_productor: String = "",
-    var calificacion_promedio: Double = 0.0
+    var calificacion_promedio: Double = 0.0,
+    var total_calificaciones: Long = 0
 )

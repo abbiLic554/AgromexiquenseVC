@@ -147,7 +147,7 @@
 
             <!-- CALIFICACIÓN -->
             <TextView
-                android:id="@+id/tvRating"
+                android:id="@+id/ratingProducto"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
@@ -166,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 app:cardCornerRadius="24dp"
-                app:layout_constraintTop_toBottomOf="@id/tvRating"
+                app:layout_constraintTop_toBottomOf="@id/ratingProducto"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
 
