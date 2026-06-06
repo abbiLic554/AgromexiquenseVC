@@ -100,11 +100,11 @@ class InfoAgroActivity : AppCompatActivity() {
                         .into(imgBeneficios)
 
                 } else {
-                    Toast.makeText(this, "No existe HISTORIA/data", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "No existe HISTORIA/data", Toast.LENGTH_SHORT).show()
                 }
             }
             .addOnFailureListener {
-                Toast.makeText(this, "Error: ${it.message}", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Error: ${it.message}", Toast.LENGTH_SHORT).show()
             }
     }
 }

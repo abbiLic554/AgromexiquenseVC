@@ -87,7 +87,6 @@ class GestionAdministradoresFragment : Fragment() {
                 .document(id)
                 .set(data)
                 .addOnSuccessListener {
-                    Toast.makeText(requireContext(), "Guardado", Toast.LENGTH_SHORT).show()
                     dialog.dismiss()
                     cargar()
                 }
@@ -124,7 +123,6 @@ class GestionAdministradoresFragment : Fragment() {
                             .document(a.id_admin)
                             .delete()
                             .addOnSuccessListener {
-                                Toast.makeText(requireContext(), "Eliminado", Toast.LENGTH_SHORT).show()
                                 cargar()
                             }
                     }

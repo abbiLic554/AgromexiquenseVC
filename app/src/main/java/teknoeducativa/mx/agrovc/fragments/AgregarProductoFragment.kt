@@ -120,7 +120,6 @@ class AgregarProductoFragment : Fragment() {
                         .add(producto)
                         .addOnSuccessListener {
 
-                            Toast.makeText(requireContext(), "Guardado", Toast.LENGTH_SHORT).show()
                             parentFragmentManager.popBackStack()
                         }
                 }

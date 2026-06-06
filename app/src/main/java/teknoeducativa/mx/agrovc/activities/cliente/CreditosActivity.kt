@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import teknoeducativa.mx.agrovc.R
+import teknoeducativa.mx.agrovc.activities.admin.LoginActivity
 
 class CreditosActivity : AppCompatActivity() {
 
@@ -27,8 +28,40 @@ class CreditosActivity : AppCompatActivity() {
     }
 
     private fun setupMenu() {
+
         findViewById<View>(R.id.btnInicio).setOnClickListener {
             drawer.closeDrawers()
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnProductores).setOnClickListener {
+            drawer.closeDrawers()
+            startActivity(Intent(this, ProductoresActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnUbicacion).setOnClickListener {
+            drawer.closeDrawers()
+            startActivity(Intent(this, UbicacionActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnEventos).setOnClickListener {
+            drawer.closeDrawers()
+            startActivity(Intent(this, EventosActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnInfo).setOnClickListener {
+            drawer.closeDrawers()
+            startActivity(Intent(this, InfoAgroActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnComite).setOnClickListener {
+            drawer.closeDrawers()
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnCreditos).setOnClickListener {
+            drawer.closeDrawers()
+            startActivity(Intent(this, CreditosActivity::class.java))
         }
     }
 

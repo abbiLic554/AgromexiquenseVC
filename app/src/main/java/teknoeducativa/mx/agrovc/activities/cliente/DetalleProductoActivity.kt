@@ -38,6 +38,7 @@ class DetalleProductoActivity : AppCompatActivity() {
         val idProductor = intent.getStringExtra("id_productor") ?: ""
         val calificacion = intent.getDoubleExtra("calificacion_promedio", 0.0)
 
+
         // ASIGNAR DATOS
         title.text = nombre
         category.text = tipo
@@ -53,6 +54,7 @@ class DetalleProductoActivity : AppCompatActivity() {
 
         // PRODUCTOR
         if (idProductor.isNotEmpty()) {
+
 
             db.collection("PRODUCTORES")
                 .document(idProductor)

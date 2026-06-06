@@ -16,12 +16,6 @@ class PerfilProductorActivity : AppCompatActivity() {
 
         val id = intent.getStringExtra("ID_PRODUCTOR")
 
-        Toast.makeText(
-            this,
-            "ID recibido: $id",
-            Toast.LENGTH_SHORT
-        ).show()
-
         val fragment = PerfilProductorFragment()
 
         val bundle = Bundle()

@@ -167,11 +167,6 @@ class EventosFragment : Fragment() {
 
                                 .addOnSuccessListener {
 
-                                    Toast.makeText(
-                                        requireContext(),
-                                        "Evento guardado",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
                                 }
 
                                 .addOnFailureListener {

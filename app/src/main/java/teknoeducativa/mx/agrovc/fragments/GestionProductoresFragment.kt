@@ -266,13 +266,6 @@ class GestionProductoresFragment : Fragment() {
                                     .add(data)
 
                                     .addOnSuccessListener {
-
-                                        Toast.makeText(
-                                            requireContext(),
-                                            "Guardado",
-                                            Toast.LENGTH_SHORT
-                                        ).show()
-
                                         dialog.dismiss()
 
                                         cargar()
@@ -289,13 +282,6 @@ class GestionProductoresFragment : Fragment() {
                                     .update(data)
 
                                     .addOnSuccessListener {
-
-                                        Toast.makeText(
-                                            requireContext(),
-                                            "Actualizado",
-                                            Toast.LENGTH_SHORT
-                                        ).show()
-
                                         dialog.dismiss()
 
                                         cargar()
@@ -355,13 +341,6 @@ class GestionProductoresFragment : Fragment() {
                                 .delete()
 
                                 .addOnSuccessListener {
-
-                                    Toast.makeText(
-                                        requireContext(),
-                                        "Eliminado",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-
                                     cargar()
                                 }
                         }

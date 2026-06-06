@@ -144,12 +144,6 @@ class HistoriaFragment : Fragment() {
                                             )
 
                                                 .addOnSuccessListener {
-
-                                                    Toast.makeText(
-                                                        requireContext(),
-                                                        "Historia guardada",
-                                                        Toast.LENGTH_SHORT
-                                                    ).show()
                                                 }
 
                                                 .addOnFailureListener {

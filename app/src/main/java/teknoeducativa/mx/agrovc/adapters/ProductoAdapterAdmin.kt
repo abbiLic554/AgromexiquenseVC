@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import teknoeducativa.mx.agrovc.R
 import teknoeducativa.mx.agrovc.models.Producto
 import com.google.firebase.firestore.FirebaseFirestore
+import android.widget.ImageButton
 
 class ProductoAdapterAdmin(
     private val lista: MutableList<Producto>
@@ -38,13 +39,9 @@ class ProductoAdapterAdmin(
                 TextView =
             view.findViewById(R.id.txtDescripcionProductoItem)
 
-        val btnEditar:
-                Button =
-            view.findViewById(R.id.btnEditar)
+        val btnEditar = itemView.findViewById<ImageButton>(R.id.btnEditar)
+        val btnEliminar = itemView.findViewById<ImageButton>(R.id.btnEliminar)
 
-        val btnEliminar:
-                Button =
-            view.findViewById(R.id.btnEliminar)
     }
 
     override fun onCreateViewHolder(
